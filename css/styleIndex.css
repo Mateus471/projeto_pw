@@ -8,12 +8,24 @@ body{
     padding: 5%;
 }
 
-#container{
-    text-align: center;
-}
-
 #title{
     text-align: center;
     font-size: 50px;
     font-family: Stencil Std, fantasy;
+}
+
+#modal-newproduct{
+    padding: 1%;
+}
+
+.fr{
+    float: left;
+}
+
+.ui.input{
+    padding-right: 2%;
+}
+
+.ui.form{
+    padding: 1%;
 }
