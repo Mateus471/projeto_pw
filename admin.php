@@ -1,9 +1,19 @@
+<?php
+    require 'include/dbconnect.php';
+    $sql = "SELECT id, name, value, photo
+              FROM project_pw";
+    $connection = mysqli_connect($server, $user, $password, $database);
+    $result = mysqli_query($connection, $sql);
+ ?>
+
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" href="css/semantic.min.css">
         <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/icon.min.css">
         <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/semantic.min.js"></script>
         <link rel="stylesheet" href="css/styleIndex.css">
         <meta charset="utf-8">

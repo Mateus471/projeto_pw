@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Cadastro de cliente</title>
+		<script>	
+			window.onload = function(){
+				document.querySelector("#btnVoltar").onclick = voltar;
+				document.querySelector("#btnEnviar").onclick = validar;
+			}
+			
+			function voltar(){
+				document.location = 'pesquisar.php';
+			}
+			
+			function validar(){
+				var msg = "";
+				
+				if (document.querySelector("#txtNome").value == ""){
+					msg = "Nome;\n";
+				}				
+				if (msg != ""){
+					msg = "Os campos abaixo são obrigatórios:\n" + msg;
+					alert(msg);
+					return false;
+				}
+				
+				return true;
+			}
+		</script>
+    </head>
+    <body>
+		<form action="incluir.php" method="post">
+			<label>Nome:</label>
+			<input type="text" id="txtNome" name="txtNome"><br>
+			<label>Email:</label>
+			<input type="email" name="txtEmail"><br>
+			<label>Data de nascimento:</label>
+			<input type="text" name="txtDataNascimento"><br>
+			<input type="submit" id="btnEnviar" value="Enviar">
+			<input type="button" id="btnVoltar" value="Voltar">
+		</form>
+</body>
+</html> 

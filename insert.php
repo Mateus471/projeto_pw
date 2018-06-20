@@ -23,7 +23,7 @@
 		$result = mysqli_query($connection, $sql);
 		mysqli_close($connection); //Encerra conexão com o banco de dados
 
-		header('Location: admin.php');
+		echo "<script>alert('Produto cadastrado com sucesso!');window.location='adm.php'</script>";
 	}
 
 ?>
